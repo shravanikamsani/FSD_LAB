@@ -1,0 +1,219 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | Shravani</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">Shravani</div>
+
+      <ul class="nav">
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#timetable">Timetable</a></li>
+        <li><a href="#assignments">Assignments</a></li>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#information">Student Information</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+      <!-- Header -->
+      <div class="header">
+        <div>
+          <h2>Student Dashboard</h2>
+          <small>Chaitanya Bharathi Institute of Technology</small>
+        </div>
+
+        <span class="badge">B.Tech · 3rd Year · CSE-AIML</span>
+      </div>
+
+      <div class="grid">
+
+        <!-- Academic Statistics -->
+        <div class="card c-3">
+          <div class="val">--</div>
+          <div class="lbl">CGPA</div>
+        </div>
+
+        <div class="card c-3">
+          <div class="val">--%</div>
+          <div class="lbl">Attendance</div>
+        </div>
+
+        <div class="card c-3">
+          <div class="val">--</div>
+          <div class="lbl">Courses</div>
+        </div>
+
+        <div class="card c-3">
+          <div class="val">--</div>
+          <div class="lbl">Due Tasks</div>
+        </div>
+
+        <!-- Today's Schedule -->
+        <div class="card c-8" id="timetable">
+          <h3>Today's Schedule</h3>
+
+          <div class="list">
+            <div class="item">
+              <div>
+                <b>Artificial Intelligence / Machine Learning</b>
+                <br>
+                <small style="color:#71717a">Update class time</small>
+              </div>
+              <span>Lecture</span>
+            </div>
+
+            <div class="item">
+              <div>
+                <b>Deep Learning</b>
+                <br>
+                <small style="color:#71717a">Update class time</small>
+              </div>
+              <span>Lecture / Lab</span>
+            </div>
+
+            <div class="item">
+              <div>
+                <b>Database Management Systems</b>
+                <br>
+                <small style="color:#71717a">Update class time</small>
+              </div>
+              <span>Lecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Assignments -->
+        <div class="card c-4" id="assignments">
+          <h3>Assignments & Deadlines</h3>
+
+          <div class="list">
+            <div class="item">
+              <div>
+                <b>Deep Learning Assignment</b>
+                <br>
+                <small style="color:#71717a">Add due date</small>
+              </div>
+              <span style="color:#f43f5e">High</span>
+            </div>
+
+            <div class="item">
+              <div>
+                <b>DBMS Lab Work</b>
+                <br>
+                <small style="color:#71717a">Add due date</small>
+              </div>
+              <span style="color:#a78bfa">Medium</span>
+            </div>
+
+            <div class="item">
+              <div>
+                <b>AI/ML Project</b>
+                <br>
+                <small style="color:#71717a">Add due date</small>
+              </div>
+              <span style="color:#22c55e">Low</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="card c-12" id="courses">
+          <h3>My Courses</h3>
+
+          <div class="list">
+            <div class="item">
+              <b>Artificial Intelligence & Machine Learning</b>
+              <span>Core</span>
+            </div>
+
+            <div class="item">
+              <b>Deep Learning</b>
+              <span>Core</span>
+            </div>
+
+            <div class="item">
+              <b>Natural Language Processing</b>
+              <span>AI/ML</span>
+            </div>
+
+            <div class="item">
+              <b>Database Management Systems</b>
+              <span>Core</span>
+            </div>
+
+            <div class="item">
+              <b>Competitive Programming / DSA</b>
+              <span>Practice</span>
+            </div>
+
+            <div class="item">
+              <b>Full Stack Development</b>
+              <span>Practical</span>
+            </div>
+          </div>
+          <small>Replace these entries with your official semester subjects.</small>
+        </div>
+
+        <!-- Attendance -->
+        <div class="card c-12" id="attendance">
+          <h3>Attendance Progress</h3>
+
+          <div class="grid" style="margin-top:0.5rem">
+
+            <div class="c-4">
+              <small>Machine Learning — Update %</small>
+              <div class="bar-bg">
+                <div class="bar" style="width:0%"></div>
+              </div>
+            </div>
+
+            <div class="c-4">
+              <small>Deep Learning — Update %</small>
+              <div class="bar-bg">
+                <div class="bar" style="width:0%"></div>
+              </div>
+            </div>
+
+            <div class="c-4">
+              <small>DBMS — Update %</small>
+              <div class="bar-bg">
+                <div class="bar" style="width:0%"></div>
+              </div>
+            </div>
+
+          </div>
+          <small>Enter your actual attendance percentages in the labels and bar widths.</small>
+        </div>
+
+        <!-- Student Information -->
+        <div class="card c-12" id="information">
+          <h3>Student Information</h3>
+
+          <p><b>Name:</b> Shravani</p>
+          <p><b>Degree:</b> Bachelor of Technology (B.Tech)</p>
+          <p><b>Branch:</b> Computer Science and Engineering — AI & ML</p>
+          <p><b>Year:</b> 3rd Year</p>
+          <p><b>College:</b> Chaitanya Bharathi Institute of Technology (CBIT)</p>
+          <p><b>Location:</b> Hyderabad, Telangana</p>
+          <p><b>Career Goal:</b> Prepare for software and AI/ML roles</p>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+```

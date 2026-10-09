@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shravani Kamsani's AI and ML portfolio">
+  <title>Shravani Kamsani | Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #11182b;
+      --text: #f4f6ff;
+      --muted: #a8b0c7;
+      --purple: #a78bfa;
+      --blue: #60a5fa;
+      --mint: #5eead4;
+      --line: rgba(255,255,255,.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(ellipse at top, #202951, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11,16,32,.94);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-container {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+
+    .grad-text {
+      background: linear-gradient(100deg, var(--purple), var(--blue), var(--mint));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .9rem;
+      transition: transform .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .primary {
+      background: linear-gradient(100deg, #8b5cf6, #3b82f6);
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+
+    .hero {
+      min-height: 570px;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      align-items: center;
+      gap: 40px;
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #ddd6fe;
+      background: rgba(167,139,250,.1);
+      border: 1px solid rgba(167,139,250,.35);
+      border-radius: 30px;
+      padding: 5px 13px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero-subtitle {
+      color: #d4dcf5;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      color: var(--muted);
+      margin-bottom: 25px;
+      max-width: 650px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card, .card {
+      background: linear-gradient(145deg, #151e35, var(--panel));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 25px;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      display: grid;
+      place-items: center;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero-card p, .card p {
+      color: var(--muted);
+    }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .fact {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--mint);
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .section-label {
+      color: var(--mint);
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-top: 6px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 10px auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+    }
+
+    .about-text p + p {
+      margin-top: 14px;
+    }
+
+    .highlights {
+      display: grid;
+      gap: 12px;
+    }
+
+    .highlight {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .highlight-icon {
+      font-size: 1.5rem;
+    }
+
+    .highlight small {
+      display: block;
+      color: var(--muted);
+    }
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: rgba(167,139,250,.12);
+      border: 1px solid rgba(167,139,250,.22);
+      color: #ddd6fe;
+      font-size: .8rem;
+    }
+
+    .pill.blue {
+      background: rgba(96,165,250,.1);
+      color: #bfdbfe;
+    }
+
+    .pill.mint {
+      background: rgba(94,234,212,.08);
+      color: #99f6e4;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .project-icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .project-note {
+      font-size: .8rem;
+      color: #c4b5fd !important;
+      margin-top: 10px;
+    }
+
+    .education {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .education-item {
+      border-left: 2px solid var(--purple);
+      padding-left: 22px;
+    }
+
+    .education-item .date {
+      color: var(--mint);
+      margin-bottom: 8px;
+      font-size: .85rem;
+    }
+
+    .contact-card {
+      text-align: center;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .contact-card p {
+      max-width: 570px;
+      margin: 12px auto 22px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 0;
+      text-align: center;
+      color: #7f8aa6;
+      font-size: .85rem;
+    }
+
+    @media (max-width: 800px) {
+      .nav-container {
+        padding: 15px 0;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+      }
+
+      .hero, .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .skills-grid, .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#home" class="brand">
+        <span class="grad-text">Shravani Kamsani</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <header id="home" class="container hero">
+    <div>
+      <span class="eyebrow">👋 Hello, I'm</span>
+
+      <h1>
+        Shravani<br>
+        <span class="grad-text">Kamsani</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        B.Tech CSE (AI & ML) Student | AI/ML Enthusiast | Developer
+      </p>
+
+      <p class="hero-desc">
+        I'm a third-year Computer Science and Engineering student
+        specializing in Artificial Intelligence and Machine Learning
+        at Chaitanya Bharathi Institute of Technology, Hyderabad.
+        I'm interested in building practical AI/ML systems and useful
+        web applications while strengthening my software development skills.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore Projects</a>
+        <a class="btn secondary" href="#contact">Contact Me</a>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <div class="avatar">SK</div>
+      <h3>Learning. Building. Improving.</h3>
+      <p>
+        Interested in AI/ML, NLP, software development, web technologies
+        and solving real-world problems with technology.
+      </p>
+
+      <div class="quick-facts">
+        <div class="fact">
+          <strong>B.Tech</strong>
+          <span>3rd Year</span>
+        </div>
+        <div class="fact">
+          <strong>CSE</strong>
+          <span>AI & ML</span>
+        </div>
+        <div class="fact">
+          <strong>CBIT</strong>
+          <span>Hyderabad</span>
+        </div>
+        <div class="fact">
+          <strong>2027</strong>
+          <span>Career goal: June</span>
+        </div>
+      </div>
+    </aside>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="card about-text">
+          <p>
+            I'm Shravani Kamsani, a B.Tech third-year student in
+            Computer Science and Engineering (AI & ML) at Chaitanya
+            Bharathi Institute of Technology (CBIT), Hyderabad.
+          </p>
+
+          <p>
+            My learning interests include machine learning, deep learning,
+            natural language processing, Python, data structures and
+            algorithms, and full-stack development. I enjoy connecting
+            what I learn in class with practical projects.
+          </p>
+
+          <p>
+            My current goal is to strengthen my problem-solving and
+            development skills, build a strong project portfolio, and
+            prepare for internships and software/AI-related job opportunities.
+          </p>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight">
+            <span class="highlight-icon">🎓</span>
+            <div><strong>Degree</strong><small>B.Tech — CSE (AI & ML)</small></div>
+          </div>
+
+          <div class="highlight">
+            <span class="highlight-icon">🏫</span>
+            <div><strong>College</strong><small>CBIT, Hyderabad</small></div>
+          </div>
+
+          <div class="highlight">
+            <span class="highlight-icon">🧠</span>
+            <div><strong>Focus Areas</strong><small>AI/ML, NLP, DSA, Web Development</small></div>
+          </div>
+
+          <div class="highlight">
+            <span class="highlight-icon">🎯</span>
+            <div><strong>Career Goal</strong><small>Prepare for a role by June 2027</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">What I'm Learning</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-intro">
+          My technical learning areas. Update this list as your experience grows.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="card">
+          <h3>🤖 AI & Machine Learning</h3>
+          <div class="pill-group">
+            <span class="pill">Machine Learning</span>
+            <span class="pill">Deep Learning</span>
+            <span class="pill">Natural Language Processing</span>
+            <span class="pill">Data Preprocessing</span>
+            <span class="pill">Scikit-learn</span>
+            <span class="pill">TensorFlow — learning</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>💻 Programming & CS</h3>
+          <div class="pill-group">
+            <span class="pill blue">Python</span>
+            <span class="pill blue">Java</span>
+            <span class="pill blue">C / C++</span>
+            <span class="pill blue">SQL</span>
+            <span class="pill blue">DSA</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>🌐 Web Development</h3>
+          <div class="pill-group">
+            <span class="pill mint">HTML</span>
+            <span class="pill mint">CSS</span>
+            <span class="pill mint">JavaScript</span>
+            <span class="pill mint">React</span>
+            <span class="pill mint">APIs</span>
+            <span class="pill mint">Streamlit</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>🛠️ Tools & Databases</h3>
+          <div class="pill-group">
+            <span class="pill">Git</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">VS Code</span>
+            <span class="pill">Google Colab</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">Docker basics</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">What I'm Working Toward</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-intro">
+          Project concepts based on my interests. Add repository links
+          and implementation details when each project is ready.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="card project-card">
+          <div>
+            <div class="project-icon">🛡️</div>
+            <h3>Fake Job & Internship Detection</h3>
+            <p>
+              A tool concept to help users assess suspicious job or
+              internship postings. The planned workflow accepts a posting
+              URL or text and presents a prediction with supporting indicators.
+            </p>
+            <p class="project-note">Status: Planned / in development.</p>
+          </div>
+
+          <div class="pill-group">
+            <span class="pill blue">Python</span>
+            <span class="pill">Machine Learning</span>
+            <span class="pill mint">Web UI</span>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div>
+            <div class="project-icon">📍</div>
+            <h3>CBITizen — Campus Problem Reporter</h3>
+            <p>
+              A campus application concept where students report issues,
+              view reported problems, and follow their status through
+              a dashboard. The goal is to make campus issue reporting
+              more organized and transparent.
+            </p>
+            <p class="project-note">Status: Project concept — update with implementation details.</p>
+          </div>
+
+          <div class="pill-group">
+            <span class="pill mint">HTML / CSS / JS</span>
+            <span class="pill blue">Dashboard UI</span>
+            <span class="pill">Problem Tracking</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">My Background</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="education">
+        <div class="card education-item">
+          <div class="date">Currently pursuing · 3rd Year</div>
+          <h3>B.Tech — Computer Science and Engineering (AI & ML)</h3>
+          <p>Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad</p>
+          <p>Expected graduation year: update with your confirmed year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Say Hello</span>
+        <h2 class="section-title">Get in Touch</h2>
+      </div>
+
+      <div class="card contact-card">
+        <h3>Open to learning and collaboration</h3>
+        <p>
+          I'm interested in internships, collaborative projects,
+          software development, and AI/ML opportunities. Add your
+          preferred email and GitHub profile to make it easy for
+          visitors to contact you.
+        </p>
+
+        <div class="contact-links">
+          <a class="btn primary"
+             href="https://shravanikamsani.github.io/#about"
+             target="_blank" rel="noopener noreferrer">
+            Portfolio Profile
+          </a>
+
+          <a class="btn secondary"
+             href="https://github.com/"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Designed and built by <span class="grad-text">Shravani Kamsani</span></p>
+      <p>B.Tech CSE (AI & ML) · CBIT Hyderabad</p>
+    </div>
+  </footer>
+
+</body>
+</html>

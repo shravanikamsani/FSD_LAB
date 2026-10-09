@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shravani Kamsani - Personal Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+                url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 15px;
+        }
+
+        .blog-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .blog-card {
+            transition: transform .2s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .navbar {
+            background-color: rgb(14, 64, 129);
+        }
+
+        .navbar-brand {
+            color: aqua !important;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: aqua !important;
+        }
+
+        .section-heading {
+            color: rgb(14, 64, 129);
+        }
+
+        footer {
+            background: #212529;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            Shravani's Blog
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#articles">Articles</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+
+        <h1 class="display-4 fw-bold">
+            Shravani Kamsani
+        </h1>
+
+        <p class="lead">
+            B.Tech CSE (AI & ML) Student | AI/ML Enthusiast |
+            Software Development Learner
+        </p>
+
+        <p>
+            Exploring Artificial Intelligence, Machine Learning,
+            Web Development and emerging technologies.
+        </p>
+
+        <a href="#articles"
+           class="btn btn-primary btn-lg mt-2">
+            Explore My Blog
+        </a>
+
+    </div>
+</section>
+
+
+<!-- Blog Articles -->
+<div class="container my-5" id="articles">
+
+    <div class="text-center mb-5">
+        <h2 class="section-heading fw-bold">My Blog</h2>
+        <p class="text-muted">
+            My education, technical interests, projects and learning journey.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Card 1: About Me -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card shadow blog-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+                     class="card-img-top"
+                     alt="College education">
+
+                <div class="card-body">
+                    <h4 class="card-title">About Me</h4>
+
+                    <p class="card-text">
+                        I'm Shravani Kamsani, a B.Tech 3rd-year
+                        Computer Science and Engineering student
+                        specializing in AI & ML at CBIT, Hyderabad.
+                    </p>
+
+                    <a href="#about" class="btn btn-outline-primary">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Card 2: Technologies -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card shadow blog-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                     class="card-img-top"
+                     alt="Computer technology">
+
+                <div class="card-body">
+                    <h4 class="card-title">Technologies</h4>
+
+                    <p class="card-text">
+                        My technical learning includes Python, Java,
+                        C/C++, SQL, HTML, CSS, JavaScript, React,
+                        machine learning and deep learning.
+                    </p>
+
+                    <a href="#skills" class="btn btn-outline-primary">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Card 3: Projects -->
+        <div class="col-md-6 col-lg-3" id="projects">
+            <div class="card shadow blog-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+                     class="card-img-top"
+                     alt="Technology projects">
+
+                <div class="card-body">
+                    <h4 class="card-title">My Projects</h4>
+
+                    <p class="card-text">
+                        I'm interested in building a Fake Job and
+                        Internship Detection system and CBITizen,
+                        a campus problem reporting application.
+                    </p>
+
+                    <a href="#project-details"
+                       class="btn btn-outline-primary">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Card 4: Learning Journey -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card shadow blog-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                     class="card-img-top"
+                     alt="Learning and studying">
+
+                <div class="card-body">
+                    <h4 class="card-title">Learning Journey</h4>
+
+                    <p class="card-text">
+                        I am improving my DSA, Python programming,
+                        machine learning, deep learning and
+                        full-stack development skills.
+                    </p>
+
+                    <a href="#learning"
+                       class="btn btn-outline-primary">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- About Section -->
+<section class="bg-white py-5" id="about">
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2 class="section-heading fw-bold">About Me</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+
+                <p class="lead">
+                    Hello! I'm Shravani Kamsani, pursuing B.Tech in
+                    Computer Science and Engineering (AI & ML) at
+                    Chaitanya Bharathi Institute of Technology,
+                    Hyderabad.
+                </p>
+
+                <p>
+                    I am interested in Artificial Intelligence,
+                    Machine Learning, Natural Language Processing,
+                    software development and building practical
+                    applications. My goal is to develop strong
+                    technical skills, work on meaningful projects
+                    and prepare for internship and job opportunities.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section class="py-5" id="skills">
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2 class="section-heading fw-bold">My Skills</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5>Programming</h5>
+                        <p>Python, Java, C, C++, SQL</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5>AI & Machine Learning</h5>
+                        <p>Machine Learning, Deep Learning, NLP</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5>Web Development</h5>
+                        <p>HTML, CSS, JavaScript, React</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5>Tools</h5>
+                        <p>Git, GitHub, VS Code, MySQL, MongoDB, Docker</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Project Details -->
+<section class="bg-white py-5" id="project-details">
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2 class="section-heading fw-bold">Project Interests</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h4>Fake Job & Internship Detection</h4>
+
+                        <p>
+                            A project concept for assessing suspicious
+                            job and internship postings using machine
+                            learning and text analysis.
+                        </p>
+
+                        <span class="badge bg-primary">AI/ML</span>
+                        <span class="badge bg-secondary">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h4>CBITizen — Campus Problem Reporter</h4>
+
+                        <p>
+                            A campus application concept for reporting
+                            problems, tracking their status and helping
+                            students communicate campus issues.
+                        </p>
+
+                        <span class="badge bg-primary">Web Development</span>
+                        <span class="badge bg-secondary">Dashboard</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Learning Journey -->
+<section class="py-5" id="learning">
+    <div class="container text-center">
+
+        <h2 class="section-heading fw-bold">My Learning Journey</h2>
+
+        <p class="lead mt-3">
+            Learn consistently. Build projects. Solve problems.
+            Improve every day.
+        </p>
+
+        <p>
+            I am focusing on DSA practice, AI/ML concepts,
+            hands-on projects and software development to strengthen
+            my technical foundation and prepare for my career.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="bg-white py-5" id="contact">
+    <div class="container text-center">
+
+        <h2 class="section-heading fw-bold">Contact Me</h2>
+
+        <p class="lead mt-3">
+            I'm interested in learning opportunities, internships,
+            collaborations and technical projects.
+        </p>
+
+        <p>
+            Add your email address and GitHub profile here to let
+            visitors contact you directly.
+        </p>
+
+        <a href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary">
+            Visit GitHub
+        </a>
+
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="py-4">
+    <div class="container text-center">
+
+        <p class="mb-1">
+            &copy; 2026 Shravani Kamsani | Personal Blog
+        </p>
+
+        <small>
+            B.Tech CSE (AI & ML) · CBIT Hyderabad
+        </small>
+
+    </div>
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
